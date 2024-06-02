@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Altura del Asiento</ion-title>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="goNext()">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="content-img"> 
+  <ion-button fill="clear" (click)="handleClick(1)" >
+    <img src="assets/imgs/img-posturas/Puntuación de la altura del asiento/postura-neutra.png" alt="silla" >
+  </ion-button>
+  <ion-button fill="clear" (click)="handleClick(2)">
+    <img src="assets/imgs/img-posturas/Puntuación de la altura del asiento/postura-desviacion.png" alt="silla" >
+  </ion-button>
+  <ion-button fill="clear" (click)="handleClick(2)">
+    <img src="assets/imgs/img-posturas/Puntuación de la altura del asiento/postura-desviacion2.png" alt="silla" >
+  </ion-button>
+  <ion-button fill="clear" (click)="handleClick(3)">
+    <img src="assets/imgs/img-posturas/Puntuación de la altura del asiento/porstura-si-tocar-asiento.png" alt="silla" >
+  </ion-button>
+</div>
+</ion-content>

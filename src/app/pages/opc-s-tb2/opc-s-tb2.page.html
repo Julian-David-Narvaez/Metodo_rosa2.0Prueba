@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Opcion Profundida del Asiento</ion-title>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="goNext()">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="content-img"> 
+    <p>La puntuacion obtenida se incrementa si ocurre</p>
+ 
+  <ion-button fill="clear" (click)="handleClick(1)">
+    <img src="assets/imgs/img-posturas/puntuacion de la profundidad del asiento/postura3.png" alt="silla" >
+  </ion-button>
+  </div>
+</ion-content>
