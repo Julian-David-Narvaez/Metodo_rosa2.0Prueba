@@ -6,6 +6,7 @@ import EvaluacionSilla from './modules/EvaluacionSilla/EvaluacionSilla';
 import ResultadoTablaA from './modules/EvaluacionSilla/ResultadoTablaA';
 import EvaluacionPantallaPerifericos from './modules/PantallaPerifericos/PantallaPerifericos';
 import ResultadoTablaB from './modules/PantallaPerifericos/ResultadoTablaB';
+import ResultadosFinales from './modules/ResultadosFinales/ResultadoFinales';
 
 const RosaEvaluacion = ({ onVolverInicio }) => {
   const [pasoActual, setPasoActual] = useState(1);
@@ -77,30 +78,11 @@ const RosaEvaluacion = ({ onVolverInicio }) => {
         );
       case 6:
         return (
-          <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 flex items-center justify-center">
-            <div className="text-center">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-                Resultados Finales ROSA
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
-                Aquí se mostrará la Tabla E (combinación final) y la opción de descargar PDF
-              </p>
-              <div className="space-x-4">
-                <button 
-                  onClick={handlePasoAnterior}
-                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50"
-                >
-                  ← Volver
-                </button>
-                <button 
-                  onClick={onVolverInicio}
-                  className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600"
-                >
-                  Nueva Evaluación
-                </button>
-              </div>
-            </div>
-          </div>
+          <ResultadosFinales 
+            onVolverInicio={onVolverInicio}
+            onVolver={handlePasoAnterior}
+            datosEvaluacion={datosCompletos}
+          />
         );
       default:
         return null;
